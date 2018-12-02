@@ -13,7 +13,10 @@ public class MouseSelector : MonoBehaviour {
 
             if (Physics.Raycast(ray, out hit, 100))
             {
-                hit.transform.gameObject.GetComponent<ClickSelectable>().select();
+                ClickSelectable selectable = hit.transform.gameObject.GetComponent<ClickSelectable>();
+                if (selectable != null) {
+                    selectable.select();
+                }
             }
         }
     }
