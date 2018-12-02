@@ -6,13 +6,21 @@ public class UnitManager : MonoBehaviour, IUnitManagerDelegate {
     public GameObject UnitPrefab;
     public GameObject SculptureAnchor;
 
+    public UnitController current;
+
     public ArrayList units;
 
-    public void DidSelect(UnitController unit, GameObject creationArrow) {
+    public void FocusUnit(UnitController unit) {
+        if (current != null) {
+            current.HideArrows();
+        }
+        current = unit;
+        unit.ShowArrows();
+    }
+
+    public void DidSelectUnitAndArrow(UnitController unit, GameObject creationArrow) {
         Vector3 distance = (unit.representation.transform.position - creationArrow.transform.position) * 2;
         Vector3 newUnitPosition = unit.transform.position - distance;
-        Debug.Log("Unit position:" + unit.transform.position + "\nNew unit position:" + newUnitPosition);
-        Debug.Log(distance);
         CreateUnit(newUnitPosition);
     }
 

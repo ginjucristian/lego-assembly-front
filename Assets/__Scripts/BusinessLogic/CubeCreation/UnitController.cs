@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public interface IUnitManagerDelegate {
-    void DidSelect(UnitController unit, GameObject creationArrow);
+    void DidSelectUnitAndArrow(UnitController unit, GameObject creationArrow);
+    void FocusUnit(UnitController unit);
 }
 
 public class UnitController : MonoBehaviour, ISelectableDelegate {
@@ -13,13 +14,15 @@ public class UnitController : MonoBehaviour, ISelectableDelegate {
     public GameObject[] creationArrows;
 
     public void DidSelect(ClickSelectable selectable) {
+        if (manager == null) {
+            print("MANAGER IS NULL");
+            return;
+        }
         if (selectable == representation.GetComponent<ClickSelectable>()) {
-            ShowArrows();
+            manager.FocusUnit(this);
         } else {
             GameObject selected = selectable.gameObject;
-            if (manager != null) {
-                manager.DidSelect(this, selected);
-            }
+            manager.DidSelectUnitAndArrow(this, selected);
         }
     }
 
@@ -28,15 +31,16 @@ public class UnitController : MonoBehaviour, ISelectableDelegate {
         foreach (GameObject arrow in creationArrows) {
             arrow.GetComponent<ClickSelectable>().selectableDelegate = this;
         }
+        HideArrows();
     }
 
-    void HideArrows() {
+    public void HideArrows() {
         foreach (GameObject arrow in creationArrows) {
             arrow.SetActive(false);
         }
     }
 
-    void ShowArrows() {
+    public void ShowArrows() {
         foreach (GameObject arrow in creationArrows) {
             arrow.SetActive(true);
         }
