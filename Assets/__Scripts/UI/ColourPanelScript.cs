@@ -36,8 +36,8 @@ public class ColourPanelScript : MonoBehaviour {
 
     public void Update()
     {
-        HideIfClickedOutside(ColourPanel);
-        HideIfClickedOutside(SaturationValue);
-        HideIfClickedOutside(Hue);
+        //HideIfClickedOutside(ColourPanel);
+        //HideIfClickedOutside(SaturationValue);
+        //HideIfClickedOutside(Hue);
     }
 }
