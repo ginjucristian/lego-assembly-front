@@ -9,7 +9,7 @@ public class CUIColorPicker : MonoBehaviour
     {
         _onValueChange = onValueChange;
     }
-    private Color _color = Color.red;
+    public static Color _color = Color.red;
     private Action<Color> _onValueChange;
     private Action _update;
 
@@ -120,6 +120,9 @@ public class CUIColorPicker : MonoBehaviour
         applySaturationValue();
         satvalKnob.transform.localPosition = new Vector2( Saturation * satvalSz.x, Value * satvalSz.y );
         hueKnob.transform.localPosition = new Vector2( hueKnob.transform.localPosition.x, Hue / 6 * satvalSz.y );
+
+        CubeSelector.AssignColorToCube();
+
         Action dragH = null;
         Action dragSV = null;
         Action idle = () => {
