@@ -8,14 +8,18 @@ namespace Construction
 {
     internal class Construction : MonoBehaviour
     {
-        GameObject[] list_All_Cubes;
+        List<GameObject> list_All_Cubes = new List<GameObject>();
         GameObject origin_Cube;
         bfs search;
         // Use this for initialization
         void Start()
         {
             origin_Cube = GameObject.FindGameObjectWithTag("OriginCube");
-            list_All_Cubes = GameObject.FindGameObjectsWithTag("Cube");
+            GameObject[] temp_list = GameObject.FindGameObjectsWithTag("Cube");
+            foreach(GameObject cube in temp_list)
+            {
+                list_All_Cubes.Add(cube);
+            }
             foreach (GameObject cube in list_All_Cubes)
             {
                 Debug.Log("cube at :" + "pos X: " + cube.transform.position.x + "pos Y: " + cube.transform.position.y + "pos Z: " + cube.transform.position.z);

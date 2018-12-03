@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{B522B4E6-D8CA-F12E-0365-D0CDFBBB0BF2}</ProjectGuid>
+    <ProjectGuid>{D4D8EE1A-986D-6114-265D-50C089326F2C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -65,16 +65,16 @@
      <Compile Include="Assets\validate.cs" />
      <Compile Include="Assets\ValidateCube.cs" />
  <Reference Include="UnityEditor.StandardEvents">
- <HintPath>C:/Users/Marian/Documents/GitHub/lego-assembly-front/conctruction-validation/lego-assembly/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+ <HintPath>C:/Users/Marian/Documents/GitHub/lego-assembly-front/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/Marian/Documents/GitHub/lego-assembly-front/conctruction-validation/lego-assembly/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/Marian/Documents/GitHub/lego-assembly-front/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>C:/Users/Marian/Documents/GitHub/lego-assembly-front/conctruction-validation/lego-assembly/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>C:/Users/Marian/Documents/GitHub/lego-assembly-front/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/Marian/Documents/GitHub/lego-assembly-front/conctruction-validation/lego-assembly/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/Marian/Documents/GitHub/lego-assembly-front/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>E:/unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
