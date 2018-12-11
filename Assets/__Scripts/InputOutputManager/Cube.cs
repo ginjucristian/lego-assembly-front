@@ -2,15 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
 
 namespace InputOutputManager
 {
     [Serializable]
     class Cube
     {
-        public double x;
-        public double y;
-        public double z;
+        public Vector3 coord;
         public String name;
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
 
 namespace InputOutputManager
 {
@@ -9,6 +10,6 @@ namespace InputOutputManager
     class Piece
     {
         public String name;
-        public Point3D structure;
+        public Vector3 structure;
     }
 }
